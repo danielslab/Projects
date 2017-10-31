@@ -9,7 +9,7 @@ namespace MSTest.Console.Extended.Infrastructure
 {
     public class ConsoleArgumentsProvider : IConsoleArgumentsProvider
     {
-        private readonly string testResultFilePathRegexPattern = @".*resultsfile:(?<ResultsFilePath>[1-9A-Za-z\\:._]{1,})";
+        private readonly string testResultFilePathRegexPattern = @".*resultsfile:(?<ResultsFilePath>[0-9A-Za-z\\:._\-]{1,})";
         private readonly string testNewResultFilePathRegexPattern = @".*(?<NewResultsFilePathArgument>/newResultsfile:(?<NewResultsFilePath>[1-9A-Za-z\\:._]{1,}))";
         private readonly string retriesRegexPattern = @".*(?<RetriesArgument>/retriesCount:(?<RetriesCount>[0-9]{1})).*";
         private readonly string failedTestsThresholdRegexPattern = @".*(?<ThresholdArgument>/threshold:(?<ThresholdCount>[0-9]{1})).*";
